@@ -1,4 +1,4 @@
-# Just
+# Just - Just do one thing.
 
 ## Emoji Commit
 
@@ -21,3 +21,34 @@ Upgrading               | :arrow_up: `:arrow_up:`
 Example:
 
 > ":tada: Initial Commit"
+
+## Packages
+
+- <a href="#just-type">just-type</a>
+
+## Usage
+
+<a name="just-type"></a>
+### just-type
+
+type checking.
+
+```js
+import type from 'just-type';
+
+function hello() {
+    console.log('hello type');
+}
+
+type(); // undefined
+type(undefined); // undefined
+type(null); // null
+type(''); // string
+type('hello'); // string
+type(0); // number
+type(true); // boolean
+type({}); // object
+type([]); // array
+type(hello); // function
+type(/\./); // regexp
+```
