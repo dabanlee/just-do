@@ -28,6 +28,7 @@ Example:
 
 - <a href="#just-type">just-type</a>
 - <a href="#just-camelize">just-camelize</a>
+- <a href="#just-extend-it">just-extend-it</a>
 
 ## Usage
 
@@ -68,4 +69,25 @@ camelize('_hello_world'); // HelloWorld
 camelize('_hello-world'); // HelloWorld
 camelize('-hello_world'); // HelloWorld
 camelize('-hello-world'); // HelloWorld
+```
+
+<a name="just-extend-it"></a>
+## just-extend-it
+
+objects extend.
+
+```js
+import extend from 'just-extend-it';
+
+var source = {
+    just: 'just',
+};
+
+extend(source); // { just: 'just', }
+extend(source, { hello: 'hello', }); // { just: 'just', hello: 'hello', }
+extend(source, { hello: 'hello', }, { world: 'world', }); // { just: 'just', hello: 'hello', world: 'world', }
+extend(true, source, { hello: 'hello', }); // { just: 'just', hello: 'hello', }
+extend(true, source, { hello: { world: 'world', }, }); // { just: 'just', hello: { world: 'world', }, }
+extend(true, source, { hello: { world: 'world', }, { hello: { hi: 'hi', }, });// { just: 'just', hello: { world: 'world', hi: 'hi', }, }
+extend(source, { hello: { world: 'world', }, }, { hello: { hi: 'hi', }, }); // { just: 'just', hello: { hi: 'hi', }, }
 ```
