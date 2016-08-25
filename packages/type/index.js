@@ -14,7 +14,7 @@ function type(any) {
     }
 
     typeString.split(' ').forEach(function (type) {
-        class2type[`[object ${type}]`] = type.toLowerCase();
+        class2type['[object ' + type + ']'] = type.toLowerCase();
     });
 
     return (
