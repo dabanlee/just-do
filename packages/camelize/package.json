@@ -1,6 +1,6 @@
 {
   "name": "just-camelize",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "transform strings to camel case.",
   "main": "index.js",
   "scripts": {
