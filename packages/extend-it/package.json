@@ -1,0 +1,24 @@
+{
+  "name": "just-extend-it",
+  "version": "1.0.0",
+  "description": "objects extend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustClear/just.git"
+  },
+  "keywords": [
+    "just",
+    "extend",
+    "no-dependencies"
+  ],
+  "author": "JustClear",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JustClear/just/issues"
+  },
+  "homepage": "https://github.com/JustClear/just#readme"
+}
