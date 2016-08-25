@@ -1,0 +1,27 @@
+{
+  "name": "just",
+  "version": "1.0.0",
+  "description": "Just do one thing.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustClear/just.git"
+  },
+  "keywords": [
+    "just",
+    "no-dependencies"
+  ],
+  "author": "JustClear",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JustClear/just/issues"
+  },
+  "homepage": "https://github.com/JustClear/just#readme",
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "eslint": "^3.3.1"
+  }
+}
