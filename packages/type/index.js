@@ -13,7 +13,7 @@ function type(any) {
         return any + '';
     }
 
-    typeString.split(' ').forEach((type) => {
+    typeString.split(' ').forEach(function (type) {
         class2type[`[object ${type}]`] = type.toLowerCase();
     });
 
