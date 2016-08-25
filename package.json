@@ -4,7 +4,8 @@
   "description": "Just do one thing.",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint src"
+    "test": "npm run lint && node test",
+    "lint": "eslint packages"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/JustClear/just#readme",
   "devDependencies": {
     "babel-eslint": "^6.1.2",
-    "eslint": "^3.3.1"
+    "eslint": "^3.3.1",
+    "tape": "^4.6.0"
   }
 }
