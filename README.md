@@ -25,6 +25,7 @@ Example:
 ## Packages
 
 - <a href="#just-type">just-type</a>
+- <a href="#just-camelize">just-camelize</a>
 
 ## Usage
 
@@ -51,4 +52,18 @@ type({}); // object
 type([]); // array
 type(hello); // function
 type(/\./); // regexp
+```
+
+<a name="just-camelize"></a>
+## just-camelize
+
+transform strings to camel case.
+
+```js
+import camelize from 'just-camelize';
+
+camelize('_hello_world'); // HelloWorld
+camelize('_hello-world'); // HelloWorld
+camelize('-hello_world'); // HelloWorld
+camelize('-hello-world'); // HelloWorld
 ```
