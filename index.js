@@ -5,7 +5,7 @@
 /*/
 
 module.exports = {
-    type: require('just-type'),
-    camelize: require('just-camelize'),
-    extend: require('just-extend-it'),
+    camelize: require('./packages/camelize'),
+    extend: require('./packages/extend-it'),
+    type: require('./packages/type'),
 };

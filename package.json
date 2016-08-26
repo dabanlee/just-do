@@ -1,6 +1,6 @@
 {
   "name": "just-do",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Just do one thing.",
   "main": "index.js",
   "scripts": {
@@ -38,10 +38,5 @@
       "ipad/6",
       "android-browser/latest"
     ]
-  },
-  "dependencies": {
-    "just-camelize": "^1.0.0",
-    "just-extend-it": "^1.0.0",
-    "just-type": "^1.0.2"
   }
 }
