@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JustClear/just.git"
+    "url": "git+https://github.com/JustClear/just-do.git"
   },
   "keywords": [
     "just",
@@ -18,9 +18,9 @@
   "author": "JustClear",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JustClear/just/issues"
+    "url": "https://github.com/JustClear/just-do/issues"
   },
-  "homepage": "https://github.com/JustClear/just#readme",
+  "homepage": "https://github.com/JustClear/just-do#readme",
   "devDependencies": {
     "babel-eslint": "^6.1.2",
     "eslint": "^3.3.1",

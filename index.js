@@ -1,6 +1,8 @@
-//
-// just do it
-//
+/*/
+/!/
+/!/ just do one thing.
+/!/
+/*/
 
 module.exports = {
     type: require('just-type'),

@@ -1,6 +1,6 @@
 # Just - Just do one thing.
 
-[![browser support](https://ci.testling.com/justclear/just.png)](https://ci.testling.com/justclear/just)
+[![browser support](https://ci.testling.com/justclear/just-do.png)](https://ci.testling.com/justclear/just-do)
 
 ## Emoji Commit
 
@@ -33,7 +33,7 @@ Example:
 ## Usage
 
 <a name="just-type"></a>
-### [just-type](https://github.com/JustClear/just/tree/master/packages/type)
+### [just-type](https://github.com/JustClear/just-do/tree/master/packages/type)
 
 type checking.
 
@@ -58,7 +58,7 @@ type(/\./); // regexp
 ```
 
 <a name="just-camelize"></a>
-## [just-camelize](https://github.com/JustClear/just/tree/master/packages/camelize)
+## [just-camelize](https://github.com/JustClear/just-do/tree/master/packages/camelize)
 
 transform strings to camel case.
 
@@ -72,7 +72,7 @@ camelize('-hello-world'); // HelloWorld
 ```
 
 <a name="just-extend-it"></a>
-## [just-extend-it](https://github.com/JustClear/just/tree/master/packages/extend-it)
+## [just-extend-it](https://github.com/JustClear/just-do/tree/master/packages/extend-it)
 
 objects extend.
 
