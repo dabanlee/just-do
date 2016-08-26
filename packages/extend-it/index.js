@@ -4,7 +4,7 @@
  */
 
  function extend() {
-     let options, name, clone, copy, source, copyIsArray,
+     var options, name, clone, copy, source, copyIsArray,
          target = arguments[0] || {},
          i = 1,
          length = arguments.length,
