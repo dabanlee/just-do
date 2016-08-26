@@ -1,6 +1,6 @@
 {
-  "name": "just",
-  "version": "1.0.1",
+  "name": "just-do",
+  "version": "1.0.0",
   "description": "Just do one thing.",
   "main": "index.js",
   "scripts": {
