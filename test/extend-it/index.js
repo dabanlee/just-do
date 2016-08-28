@@ -2,110 +2,107 @@
 // extend test
 //
 
-var test = require('tape');
+var expect = require('expect.js');
 var extend = require('../../packages/extend-it');
 
-extend({});
-extend({}, {});
-extend({}, {}, {});
-extend(true, {});
-extend(true, {}, {});
+var source = {
+    just: 'just',
+};
 
-test('extend object', function (t) {
-    var source = {
-        just: 'just',
-    };
-
-    t.plan(1);
-    extend(source);
-    t.deepEqual(source, {
-        just: 'just',
+describe('Extend Test', function () {
+    describe('Shallow Extend Test', function () {
+        it('shoud shallow extend object', function () {
+            source = {
+                just: 'just',
+            };
+            expect(extend(source)).to.eql({
+                just: 'just',
+            });
+        })
+        it('shoud shallow extend object', function () {
+            source = {
+                just: 'just',
+            };
+            expect(extend(source, {
+                hello: 'hello',
+            })).to.eql({
+                just: 'just',
+                hello: 'hello',
+            });
+        })
+        it('shoud shallow extend object', function () {
+            source = {
+                just: 'just',
+            };
+            expect(extend(source, {
+                hello: 'hello',
+            }, {
+                world: 'world',
+            })).to.eql({
+                just: 'just',
+                hello: 'hello',
+                world: 'world',
+            });
+        })
+        it('shoud shallow extend object', function () {
+            source = {
+                just: 'just',
+            };
+            expect(extend(source, {
+                hello: {
+                    world: 'world',
+                }
+            }, {
+                hello: {
+                    hi: 'hi',
+                },
+            })).to.eql({
+                just: 'just',
+                hello: {
+                    hi: 'hi',
+                },
+            });
+        })
     });
-
-    t.plan(2);
-    extend(source, {
-        hello: 'hello',
+    describe('Deep Extend Test', function () {
+        it('shoud deep extend object', function () {
+            source = {
+                just: 'just',
+            };
+            expect(extend(true, source, {
+                hello: 'hello',
+            })).to.eql({
+                just: 'just',
+                hello: 'hello',
+            });
+        })
+        it('shoud deep extend object', function () {
+            source = {
+                just: 'just',
+            };
+            expect(extend(true, source, {
+                hello: {
+                    world: 'world',
+                },
+            })).to.eql({
+                just: 'just',
+                hello: {
+                    world: 'world',
+                },
+            });
+        })
+        it('shoud deep extend object', function () {
+            expect(extend(true, source, {
+                hello: {
+                    hi: 'hi',
+                },
+            })).to.eql({
+                just: 'just',
+                hello: {
+                    world: 'world',
+                    hi: 'hi',
+                },
+            });
+        })
     });
-    t.deepEqual(source, {
-        just: 'just',
-        hello: 'hello',
-    });
-
-    t.plan(3);
-    extend(source, {
-        hello: 'hello',
-    }, {
-        world: 'world',
-    });
-    t.deepEqual(source, {
-        just: 'just',
-        hello: 'hello',
-        world: 'world',
-    });
-
-    t.plan(4);
-    source = {
-        just: 'just',
-    };
-    extend(source, {
-        hello: {
-            world: 'world',
-        }
-    }, {
-        hello: {
-            hi: 'hi',
-        },
-    });
-    t.deepEqual(source, {
-        just: 'just',
-        hello: {
-            hi: 'hi',
-        },
-    });
-
-    t.end()
-});
-
-test('deep extend object', function (t) {
-    var source = {
-        just: 'just',
-    };
-
-    t.plan(1);
-    extend(true, source, {
-        hello: 'hello',
-    });
-    t.deepEqual(source, {
-        just: 'just',
-        hello: 'hello',
-    });
-
-    t.plan(2);
-    extend(true, source, {
-        hello: {
-            world: 'world',
-        },
-    });
-    t.deepEqual(source, {
-        just: 'just',
-        hello: {
-            world: 'world',
-        },
-    });
-
-    t.plan(3);
-    extend(true, source, {
-        hello: {
-            hi: 'hi',
-        },
-    });
-    t.deepEqual(source, {
-        just: 'just',
-        hello: {
-            world: 'world',
-            hi: 'hi',
-        },
-    });
-
-    t.end()
 });

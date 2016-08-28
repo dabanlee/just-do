@@ -2,97 +2,73 @@
 // type test
 //
 
-var test = require('tape');
+var expect = require('expect.js');
 var type = require('../../packages/type');
 
-test('determine the type of undefined', function (t) {
-    var result = type();
-    var resultTwo = type(undefined);
+describe('Type Test', function () {
+    describe('Undefined Test', function () {
+        it('shout equal to undefined', function () {
+            expect(type()).to.equal('undefined');
+        })
+        it('shout equal to undefined', function () {
+            expect(type(undefined)).to.equal('undefined');
+        })
+    });
 
-    t.plan(1);
-    t.equal(result, 'undefined');
+    describe('Null Test', function () {
+        it('shout equal to null', function () {
+            expect(type(null)).to.equal('null');
+        })
+    });
 
-    t.plan(2);
-    t.equal(resultTwo, 'undefined');
+    describe('String Test', function () {
+        it('shout equal to string', function () {
+            expect(type('')).to.equal('string');
+        })
+        it('shout equal to string', function () {
+            expect(type('hello')).to.equal('string');
+        })
+    });
 
-    t.end();
-});
+    describe('Number Test', function () {
+        it('shout equal to number', function () {
+            expect(type(0)).to.equal('number');
+        })
+    });
 
-test('determine the type of null', function (t) {
-    var result = type(null);
+    describe('Boolean Test', function () {
+        it('shout equal to boolean', function () {
+            expect(type(true)).to.equal('boolean');
+        })
+        it('shout equal to boolean', function () {
+            expect(type(false)).to.equal('boolean');
+        })
+    });
 
-    t.plan(1);
-    t.equal(result, 'null');
+    describe('Object Test', function () {
+        it('shout equal to object', function () {
+            expect(type({})).to.equal('object');
+        })
+    });
 
-    t.end();
-});
+    describe('Array Test', function () {
+        it('shout equal to array', function () {
+            expect(type([])).to.equal('array');
+        })
+    });
 
-test('determine the type of string', function (t) {
-    var result = type('');
-    var resultTwo = type('hello');
+    describe('Function Test', function () {
+        var hello = function () {
+            console.log('hello');
+        }
+        it('shout equal to function', function () {
+            expect(type(hello)).to.equal('function');
+        })
+    });
 
-    t.plan(1);
-    t.equal(result, 'string');
-
-    t.plan(2);
-    t.equal(resultTwo, 'string');
-
-    t.end();
-});
-
-test('determine the type of number', function (t) {
-    var result = type(0);
-
-    t.plan(1);
-    t.equal(result, 'number');
-
-    t.end();
-});
-
-test('determine the type of boolean', function (t) {
-    var result = type(true);
-
-    t.plan(1);
-    t.equal(result, 'boolean');
-
-    t.end();
-});
-
-test('determine the type of object', function (t) {
-    var result = type({});
-
-    t.plan(1);
-    t.equal(result, 'object');
-
-    t.end();
-});
-
-test('determine the type of array', function (t) {
-    var result = type([]);
-
-    t.plan(1);
-    t.equal(result, 'array');
-
-    t.end();
-});
-
-test('determine the type of function', function (t) {
-    var hello = function () {
-        console.log('hello');
-    }
-    var result = type(hello);
-
-    t.plan(1);
-    t.equal(result, 'function');
-
-    t.end();
-});
-
-test('determine the type of regular expression', function (t) {
-    var result = type(/\./);
-
-    t.plan(1);
-    t.equal(result, 'regexp');
-
-    t.end();
+    describe('Regular Expression Test', function () {
+        it('shout equal to regexp', function () {
+            expect(type(/\./)).to.equal('regexp');
+        })
+    });
 });
