@@ -4,7 +4,7 @@
   "description": "Just do one thing.",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint && node test",
+    "test": "npm run lint && mocha test",
     "lint": "eslint packages"
   },
   "repository": {
@@ -24,7 +24,8 @@
   "devDependencies": {
     "babel-eslint": "^6.1.2",
     "eslint": "^3.3.1",
-    "tape": "^4.6.0"
+    "expect.js": "^0.3.1",
+    "mocha": "^3.0.2"
   },
   "testling": {
     "files": "test/index.js",
