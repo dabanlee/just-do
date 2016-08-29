@@ -81,17 +81,51 @@ objects extend.
 ```js
 import extend from 'just-extend-it';
 
-var source = {
+let source = {
     just: 'just',
 };
 
 extend(source); // { just: 'just', }
-extend(source, { hello: 'hello', }); // { just: 'just', hello: 'hello', }
-extend(source, { hello: 'hello', }, { world: 'world', }); // { just: 'just', hello: 'hello', world: 'world', }
-extend(true, source, { hello: 'hello', }); // { just: 'just', hello: 'hello', }
-extend(true, source, { hello: { world: 'world', }, }); // { just: 'just', hello: { world: 'world', }, }
-extend(true, source, { hello: { world: 'world', }, }, { hello: { hi: 'hi', }, });// { just: 'just', hello: { world: 'world', hi: 'hi', }, }
-extend(source, { hello: { world: 'world', }, }, { hello: { hi: 'hi', }, }); // { just: 'just', hello: { hi: 'hi', }, }
+
+extend(source, {
+    hello: 'hello',
+}); // { just: 'just', hello: 'hello', }
+
+extend(source, {
+    hello: 'hello',
+}, {
+    world: 'world',
+}); // { just: 'just', hello: 'hello', world: 'world', }
+
+extend(true, source, {
+    hello: 'hello',
+}); // { just: 'just', hello: 'hello', }
+
+extend(true, source, {
+    hello: {
+        world: 'world',
+    },
+}); // { just: 'just', hello: { world: 'world', }, }
+
+extend(true, source, {
+    hello: {
+        world: 'world',
+    }, {
+        hello: {
+            hi: 'hi',
+        },
+    },
+});// { just: 'just', hello: { world: 'world', hi: 'hi', }, }
+
+extend(source, {
+    hello: {
+        world: 'world',
+    },
+}, {
+    hello: {
+        hi: 'hi',
+    },
+}); // { just: 'just', hello: { hi: 'hi', }, }
 ```
 
 <a name="just-find"></a>
@@ -149,5 +183,5 @@ let object = {
 
 map(object, function (key, value) {
     return value * value;
-});
+}); // { a: 0, b: 25, c: 49, d: 36, e: 64, }
 ```
