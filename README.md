@@ -30,6 +30,7 @@ Example:
 - <a href="#just-camelize">just-camelize</a>
 - <a href="#just-extend-it">just-extend-it</a>
 - <a href="#just-find">just-find</a>
+- <a href="#just-map-it">just-map-it</a>
 
 ## Usage
 
@@ -128,4 +129,25 @@ find(object, function (key, value) {
 find(object, function (key, value) {
     return value > 0 && value < 8;
 }); // { b: 5, c: 7, d: 6, }
+```
+
+<a name="just-map-it"></a>
+### [just-map-it](https://github.com/JustClear/just-do/tree/master/packages/map-it)
+
+map object.
+
+```js
+import map from 'just-map-it';
+
+let object = {
+    a: 0,
+    b: 5,
+    c: 7,
+    d: 6,
+    e: 8,
+};
+
+map(object, function (key, value) {
+    return value * value;
+});
 ```
