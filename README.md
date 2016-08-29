@@ -1,6 +1,6 @@
 # Just - Just do one thing.
 
-[![browser support](https://ci.testling.com/justclear/just-do.png)](https://ci.testling.com/justclear/just-do)
+<!-- [![browser support](https://ci.testling.com/justclear/just-do.png)](https://ci.testling.com/justclear/just-do) -->
 
 ## Emoji Commit
 
@@ -29,6 +29,7 @@ Example:
 - <a href="#just-type">just-type</a>
 - <a href="#just-camelize">just-camelize</a>
 - <a href="#just-extend-it">just-extend-it</a>
+- <a href="#just-find">just-find</a>
 
 ## Usage
 
@@ -58,7 +59,7 @@ type(/\./); // regexp
 ```
 
 <a name="just-camelize"></a>
-## [just-camelize](https://github.com/JustClear/just-do/tree/master/packages/camelize)
+### [just-camelize](https://github.com/JustClear/just-do/tree/master/packages/camelize)
 
 transform strings to camel case.
 
@@ -72,7 +73,7 @@ camelize('-hello-world'); // HelloWorld
 ```
 
 <a name="just-extend-it"></a>
-## [just-extend-it](https://github.com/JustClear/just-do/tree/master/packages/extend-it)
+### [just-extend-it](https://github.com/JustClear/just-do/tree/master/packages/extend-it)
 
 objects extend.
 
@@ -88,6 +89,43 @@ extend(source, { hello: 'hello', }); // { just: 'just', hello: 'hello', }
 extend(source, { hello: 'hello', }, { world: 'world', }); // { just: 'just', hello: 'hello', world: 'world', }
 extend(true, source, { hello: 'hello', }); // { just: 'just', hello: 'hello', }
 extend(true, source, { hello: { world: 'world', }, }); // { just: 'just', hello: { world: 'world', }, }
-extend(true, source, { hello: { world: 'world', }, { hello: { hi: 'hi', }, });// { just: 'just', hello: { world: 'world', hi: 'hi', }, }
+extend(true, source, { hello: { world: 'world', }, }, { hello: { hi: 'hi', }, });// { just: 'just', hello: { world: 'world', hi: 'hi', }, }
 extend(source, { hello: { world: 'world', }, }, { hello: { hi: 'hi', }, }); // { just: 'just', hello: { hi: 'hi', }, }
+```
+
+<a name="just-find"></a>
+### [just-find](https://github.com/JustClear/just-do/tree/master/packages/find)
+
+find key or value in object.
+
+```js
+import find from 'just-find';
+
+let object = {
+    hello: 'hello',
+    onClick: 'onClick',
+    onTouch: 'onTouch',
+    just: null,
+    a: 0,
+    b: 5,
+    c: 7,
+    d: 6,
+    e: 8,
+};
+
+find(object, function (key, value) {
+    return key === 'hello';
+}); // { hello: 'hello', }
+
+find(object, function (key, value) {
+    return typeof value === 'number';
+}); // { a: 0, b: 5, c: 7, d: 6, e: 8, }
+
+find(object, function (key, value) {
+    return key.slice(0, 2) === 'on';
+}); // { onClick: 'onClick', onTouch: 'onTouch', }
+
+find(object, function (key, value) {
+    return value > 0 && value < 8;
+}); // { b: 5, c: 7, d: 6, }
 ```
