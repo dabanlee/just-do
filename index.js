@@ -9,4 +9,5 @@ module.exports = {
     extend: require('./packages/extend-it'),
     type: require('./packages/type'),
     find: require('./packages/find'),
+    map: require('./packages/map-it'),
 };
