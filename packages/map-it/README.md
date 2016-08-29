@@ -15,5 +15,5 @@ let object = {
 
 map(object, function (key, value) {
     return value * value;
-});
+}); // { a: 0, b: 25, c: 49, d: 36, e: 64, }
 ```
