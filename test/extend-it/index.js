@@ -11,15 +11,15 @@ var source = {
 
 describe('Extend Test', function () {
     describe('Shallow Extend Test', function () {
-        it('shoud shallow extend object', function () {
+        it('should shallow extend object', function () {
             source = {
                 just: 'just',
             };
             expect(extend(source)).to.eql({
                 just: 'just',
             });
-        })
-        it('shoud shallow extend object', function () {
+        });
+        it('should shallow extend object', function () {
             source = {
                 just: 'just',
             };
@@ -29,8 +29,8 @@ describe('Extend Test', function () {
                 just: 'just',
                 hello: 'hello',
             });
-        })
-        it('shoud shallow extend object', function () {
+        });
+        it('should shallow extend object', function () {
             source = {
                 just: 'just',
             };
@@ -43,8 +43,8 @@ describe('Extend Test', function () {
                 hello: 'hello',
                 world: 'world',
             });
-        })
-        it('shoud shallow extend object', function () {
+        });
+        it('should shallow extend object', function () {
             source = {
                 just: 'just',
             };
@@ -65,7 +65,7 @@ describe('Extend Test', function () {
         })
     });
     describe('Deep Extend Test', function () {
-        it('shoud deep extend object', function () {
+        it('should deep extend object', function () {
             source = {
                 just: 'just',
             };
@@ -75,8 +75,8 @@ describe('Extend Test', function () {
                 just: 'just',
                 hello: 'hello',
             });
-        })
-        it('shoud deep extend object', function () {
+        });
+        it('should deep extend object', function () {
             source = {
                 just: 'just',
             };
@@ -90,8 +90,8 @@ describe('Extend Test', function () {
                     world: 'world',
                 },
             });
-        })
-        it('shoud deep extend object', function () {
+        });
+        it('should deep extend object', function () {
             expect(extend(true, source, {
                 hello: {
                     hi: 'hi',
