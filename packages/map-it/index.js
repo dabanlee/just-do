@@ -14,7 +14,7 @@ function map(object, callback) {
 
     while (i--) {
         key = keys[i];
-        result[key] = callback(key, object[key])
+        result[key] = callback(key, object[key]);
     }
 
     return result;
