@@ -1,7 +1,8 @@
 /**
  * type checking
  *
- * @param {Any} any
+ * @param {Object} object
+ * @param {Function} callback
  */
 
 function find(object, callback) {
