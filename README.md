@@ -31,6 +31,7 @@ Example:
 - <a href="#just-extend-it">just-extend-it</a>
 - <a href="#just-find">just-find</a>
 - <a href="#just-map-it">just-map-it</a>
+- <a href="#just-get-query">just-get-query</a>
 
 ## Usage
 
@@ -184,4 +185,19 @@ let object = {
 map(object, function (key, value) {
     return value * value;
 }); // { a: 0, b: 25, c: 49, d: 36, e: 64, }
+```
+
+<a name="just-get-query"></a>
+### [just-get-query](https://github.com/JustClear/just-do/tree/master/packages/get-query)
+
+get url query.
+
+```js
+import getQuery from 'just-get-query';
+
+let url = location.search; // https://just-do.io?hello=hello&world=world
+
+getQuery('just'); // null
+getQuery('hello'); // hello
+getQuery('world'); // world
 ```
