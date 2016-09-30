@@ -8,6 +8,7 @@
 - <a href="#just-find">just-find</a>
 - <a href="#just-map-it">just-map-it</a>
 - <a href="#just-get-query">just-get-query</a>
+- <a href="#just-ajax">just-ajax</a>
 
 ## Usage
 
@@ -189,4 +190,28 @@ getQuery('hello', '??' + search)
 getQuery('world', search)
 getQuery('world', '?' + search)
 getQuery('world', '??' + search)
+```
+
+<a name="just-ajax"></a>
+### just-ajax
+
+ajax request.
+
+```js
+import ajax from 'just-ajax';
+
+ajax({
+    url: 'http://api.hello.com/',
+    type: 'POST',
+    data: {
+        username: 'hello',
+        password: 'world',
+    },
+    success: function (response) {
+        console.log(response);
+    },
+    error: function (error) {
+        console.log(error);
+    },
+});
 ```
